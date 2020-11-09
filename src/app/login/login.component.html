@@ -1,0 +1,15 @@
+<!--<p>login works!</p>-->
+<!--Username : <input type="text" name="username" value="{{username}}">-->
+<h1>Please, login...</h1>
+<div class="container">
+  <div class="alert alert-warning" *ngIf="invalidLogin">{{errorMessage}}</div>
+
+  <div>
+    Username : <input type="text" name="username" [(ngModel)]="username">
+    Password : <input type="password" name="password" [(ngModel)]="password">
+
+    <!--dynamically changing by using ng-model-->
+    <!--Username : {{username}}-->
+    <button (click)=handleLogin() class="btn btn-success ml-3">Login</button>
+  </div>
+</div>
